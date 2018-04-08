@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<a href="#" onclick="add()">添加</a>
+
+
+<h1>列表</h1>
+<table id="datas">
+    <tr>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>操作</td>
+    </tr>
+    <tbody>
+    <tr th:each="user:${userList}">
+    <td id="uid" th:text="${user.id}"></td>
+    <td id="uname" th:text="${user.name}"></td>
+    <td><a href="#" onclick="del()">删除</a></td>
+    <td><a href="#" onclick="edit()">编辑</a></td>
+    </tr>
+    </tbody>
+
+</table>
+<script type="text/javascript" th:src="@{js/jquery-3.2.1.min.js}" ></script>
+</body>
+
+<script>
+
+    function add() {
+        var name = "zhangsan";
+        $.ajax({
+            url:"/user/insert?name="+name,
+            success:function (data) {
+                if(data == 'ok'){
+                    alert(data);
+                }
+            }
+        });
+    }
+
+    function del() {
+
+        var id = $("#uid").text();
+        $.ajax({
+            url:"/user/delete?id="+id,
+            success:function (data) {
+                if(data == 'ok'){
+                    alert(data);
+                }
+            }
+        });
+    }
+
+    function edit() {
+
+        $.ajax({
+            url:"/user/update",
+            success:function (data) {
+                if(data == 'ok'){
+                    alert(data);
+                }
+            }
+        });
+    }
+</script>
+
+</html>
