@@ -7,17 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mytest" />
+        <module name="work-bootstrap-tree" />
         <module name="work-file-upload" />
         <module name="work-log-collect" />
         <module name="work-order-unpay" />
+        <module name="work-shiro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mytest" target="1.5" />
+      <module name="work-bootstrap-tree" target="1.8" />
       <module name="work-file-upload" target="1.8" />
       <module name="work-log-collect" target="1.8" />
       <module name="work-order-unpay" target="1.8" />
       <module name="work-redis-listenner" target="1.8" />
+      <module name="work-shiro" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

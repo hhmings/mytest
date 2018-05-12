@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+</head>
+<body>
+
+<!--tree -->
+<div id="tree" class="treeview">
+
+</div>
+
+
+</body>
+
+<script>
+    $(function () {
+
+            $.ajax({
+            type:"GET",
+            url:"/node",
+            dataType:"json",
+            success:function (result) {
+                //tree
+                $('#tree').treeview({
+                    data:result,         // data is not optional
+                    levels: 2,
+                    color: "#428bca",
+                    multiSelect: true,
+                    showCheckbox: true,
+                    selectable: true,
+                    onNodeSelected: function (event, data) {//选中的节点
+
+                        console.log("点击的id: " + data.id);
+
+                        if (data.nodes != null) {
+                            var select_node = $('#tree').treeview('getSelected');
+                            if (select_node[0].state.expanded) {//如果以展开，就关闭
+                                $('#tree').treeview('collapseNode', select_node);
+                                select_node[0].state.selected = false;
+                            } else {//如果关闭，就展开
+                                $('#tree').treeview('expandNode', select_node);
+                                select_node[0].state.selected = false;
+                            }
+                        }
+                    },
+                    onNodeUnselected: function (event, node) {
+                    }
+
+                });
+            }
+        });
+
+    });
+
+
+    // 选中父节点时，选中所有子节点
+    function getChildNodeIdArr(node) {
+        var ts = [];
+        if (node.nodes) {
+            for (x in node.nodes) {
+                ts.push(node.nodes[x].nodeId);
+                if (node.nodes[x].nodes) {
+                    var getNodeDieDai = getChildNodeIdArr(node.nodes[x]);
+                    for (j in getNodeDieDai) {
+                        ts.push(getNodeDieDai[j]);
+                    }
+                }
+            }
+        } else {
+            ts.push(node.nodeId);
+        }
+        return ts;
+    }
+
+    // 选中所有子节点时，选中父节点 取消子节点时取消父节点
+    function setParentNodeCheck(node) {
+        var parentNode = $("#treeview-checkable").treeview("getNode", node.parentId);
+        if (parentNode.nodes) {
+            var checkedCount = 0;
+            for (x in parentNode.nodes) {
+                if (parentNode.nodes[x].state.checked) {
+                    checkedCount++;
+                } else {
+                    break;
+                }
+            }
+            if (checkedCount == parentNode.nodes.length) {  //如果子节点全部被选 父全选
+                $("#treeview-checkable").treeview("checkNode", parentNode.nodeId);
+                setParentNodeCheck(parentNode);
+            } else {   //如果子节点未全部被选 父未全选
+                $('#treeview-checkable').treeview('uncheckNode', parentNode.nodeId);
+                setParentNodeCheck(parentNode);
+            }
+        }
+    }
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+    <script src="@{/static/js/my.js}"></script>
+</head>
+<body>
+
+<div>
+    <div id="tree" style="color: #999; font-size: 14px;"></div>
+    <div>
+        <button type="button" class="btn btn-success" id="btn-check-all">Check All</button>
+        <button type="button" class="btn btn-danger" id="btn-uncheck-all">Uncheck All</button>
+    </div>
+    <div id="output"></div>
+</div>
+
+</body>
+
+
+</html>
