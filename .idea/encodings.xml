@@ -4,8 +4,8 @@
     <file url="file://$PROJECT_DIR$/work-bootstrap-tree" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-file-upload" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-log-collect" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/work-mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-order-unpay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-shiro" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/work-shiro/src/main/resources/application.yml" charset="UTF-8" />
   </component>
 </project>

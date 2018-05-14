@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/work-bootstrap-tree/work-bootstrap-tree.iml" filepath="$PROJECT_DIR$/work-bootstrap-tree/work-bootstrap-tree.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-file-upload/work-file-upload.iml" filepath="$PROJECT_DIR$/work-file-upload/work-file-upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-log-collect/work-log-collect.iml" filepath="$PROJECT_DIR$/work-log-collect/work-log-collect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/work-mybatis/work-mybatis.iml" filepath="$PROJECT_DIR$/work-mybatis/work-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-order-unpay/work-order-unpay.iml" filepath="$PROJECT_DIR$/work-order-unpay/work-order-unpay.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-shiro/work-shiro.iml" filepath="$PROJECT_DIR$/work-shiro/work-shiro.iml" />
     </modules>

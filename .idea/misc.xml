@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/work-order-unpay/pom.xml" />
         <option value="$PROJECT_DIR$/work-bootstrap-tree/pom.xml" />
         <option value="$PROJECT_DIR$/work-shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/work-mybatis/pom.xml" />
       </list>
     </option>
   </component>
