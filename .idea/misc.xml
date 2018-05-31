@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/work-bootstrap-tree/pom.xml" />
         <option value="$PROJECT_DIR$/work-shiro/pom.xml" />
         <option value="$PROJECT_DIR$/work-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/work-test/pom.xml" />
+        <option value="$PROJECT_DIR$/work-layui/pom.xml" />
       </list>
     </option>
   </component>

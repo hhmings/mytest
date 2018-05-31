@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户信息列表</title>
+    <link rel="stylesheet" th:href="@{~/layui/css/layui.css}"/>
+    <script th:src="@{~/layui/layui.js}"></script>
+    <script th:src="@{~/js/jquery-3.2.1.min.js}"></script>
+</head>
+<body>
+
+<table class="layui-table" lay-filter="demo" lay-data="{height:315, url:'user/list', page:true, id:'test'}" >
+    <thead>
+    <tr>
+        <th lay-data="{field:'id', width:80}">ID</th>
+        <th lay-data="{field:'username', width:100}">用户名</th>
+        <th lay-data="{field:'city',width: 80}">城市</th>
+    </tr>
+    </thead>
+</table>
+
+
+
+
+<script>
+
+function init() {
+    var url = "/user/list";
+
+    layui.use('table','layer', function () {
+        var layer = layui.layer;
+        var table = layui.table;
+
+        var tableOptions = {
+            url: url, //请求地址
+            method: 'GET', //方式
+            id: 'listReload', //生成 Layui table 的标识 id，必须提供，用于后文刷新操作，笔者该处出过问题
+            page: true, //是否分页
+            where: { type: "all" }, //请求后端接口的条件，该处就是条件错误点，按照官方给出的代码示例，原先写成了 where: { key : { type: "all" } }，结果并不是我想的那样，如此写，key 将是后端的一个类作为参数，里面有 type 属性，如果误以为 key 是 Layui 提供的格式，那就大错特错了
+            response: { //定义后端 json 格式，详细参见官方文档
+                statusName: 'Code', //状态字段名称
+                statusCode: '200', //状态字段成功值
+                msgName: 'Message', //消息字段
+                countName: 'Total', //总数字段
+                dataName: 'Result' //数据字段
+            }
+        };
+
+        table.init('demo', tableOptions);
+    });
+
+}
+
+
+</script>
+
+
+</body>
+</html>
