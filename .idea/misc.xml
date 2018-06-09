@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/work-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/work-test/pom.xml" />
         <option value="$PROJECT_DIR$/work-layui/pom.xml" />
+        <option value="$PROJECT_DIR$/work-swagger/pom.xml" />
       </list>
     </option>
   </component>

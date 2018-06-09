@@ -14,6 +14,7 @@
         <module name="work-mybatis" />
         <module name="work-order-unpay" />
         <module name="work-shiro" />
+        <module name="work-swagger" />
         <module name="work-test" />
       </profile>
     </annotationProcessing>
@@ -27,6 +28,7 @@
       <module name="work-order-unpay" target="1.8" />
       <module name="work-redis-listenner" target="1.8" />
       <module name="work-shiro" target="1.8" />
+      <module name="work-swagger" target="1.8" />
       <module name="work-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>

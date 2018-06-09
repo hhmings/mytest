@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/work-mybatis/work-mybatis.iml" filepath="$PROJECT_DIR$/work-mybatis/work-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-order-unpay/work-order-unpay.iml" filepath="$PROJECT_DIR$/work-order-unpay/work-order-unpay.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-shiro/work-shiro.iml" filepath="$PROJECT_DIR$/work-shiro/work-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/work-swagger/work-swagger.iml" filepath="$PROJECT_DIR$/work-swagger/work-swagger.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-test/work-test.iml" filepath="$PROJECT_DIR$/work-test/work-test.iml" />
     </modules>
   </component>
