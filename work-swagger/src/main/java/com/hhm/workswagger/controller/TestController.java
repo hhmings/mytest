@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
+ *
+ * http://127.0.0.1:8080/swagger-ui.html
+ *
  * @author Ming
  * @create 2018-06-09 8:58
  */

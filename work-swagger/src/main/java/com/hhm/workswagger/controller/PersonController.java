@@ -45,7 +45,7 @@ public class PersonController {
         return "添加成功";
     }
 
-    @ApiOperation(value = "查询Person", response = Person.class)
+    @ApiOperation(value = "查询Person")
     @GetMapping("/query")
     public List<Person> queryUser() {
         List<Person> list = personJpa.findAll();
