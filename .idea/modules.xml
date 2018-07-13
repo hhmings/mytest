@@ -9,7 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/work-log-collect/work-log-collect.iml" filepath="$PROJECT_DIR$/work-log-collect/work-log-collect.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-mybatis/work-mybatis.iml" filepath="$PROJECT_DIR$/work-mybatis/work-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-order-unpay/work-order-unpay.iml" filepath="$PROJECT_DIR$/work-order-unpay/work-order-unpay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/work-quartz/work-quartz.iml" filepath="$PROJECT_DIR$/work-quartz/work-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/work-rabbitmq/work-rabbitmq.iml" filepath="$PROJECT_DIR$/work-rabbitmq/work-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-shiro/work-shiro.iml" filepath="$PROJECT_DIR$/work-shiro/work-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/work-shiro-demo/work-shiro-demo.iml" filepath="$PROJECT_DIR$/work-shiro-demo/work-shiro-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-swagger/work-swagger.iml" filepath="$PROJECT_DIR$/work-swagger/work-swagger.iml" />
       <module fileurl="file://$PROJECT_DIR$/work-test/work-test.iml" filepath="$PROJECT_DIR$/work-test/work-test.iml" />
     </modules>

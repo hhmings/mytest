@@ -13,6 +13,9 @@
         <option value="$PROJECT_DIR$/work-test/pom.xml" />
         <option value="$PROJECT_DIR$/work-layui/pom.xml" />
         <option value="$PROJECT_DIR$/work-swagger/pom.xml" />
+        <option value="$PROJECT_DIR$/work-quartz/pom.xml" />
+        <option value="$PROJECT_DIR$/work-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/work-shiro-demo/pom.xml" />
       </list>
     </option>
   </component>

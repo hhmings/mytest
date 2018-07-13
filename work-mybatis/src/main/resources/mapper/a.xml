@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hhm.workmybatis.dao.TestDao">
+
+    <insert id="saveTest1" parameterType="cn.hhm.workmybatis.domain.Test1">
+        INSERT INTO a(id,myname) VALUES(#{id},#{myname})
+    </insert>
+
+    <insert id="saveTest2" parameterType="cn.hhm.workmybatis.domain.Test2">
+        INSERT INTO b(id,age) VALUES(#{id},#{age})
+    </insert>
+    
+    <select id="getTest1List" resultType="cn.hhm.workmybatis.domain.Test1">
+        SELECT * FROM a
+    </select>
+
+</mapper>

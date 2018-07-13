@@ -7,7 +7,10 @@
     <file url="file://$PROJECT_DIR$/work-log-collect" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-order-unpay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/work-quartz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/work-rabbitmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-shiro" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/work-shiro-demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-swagger" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/work-test" charset="UTF-8" />
   </component>

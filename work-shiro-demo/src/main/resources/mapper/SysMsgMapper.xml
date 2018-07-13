@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hhm.workshirodemo.dao.SysMsgMapper">
+
+    <insert id="insertMsg">
+        INSERT INTO sys_msg(msg) VALUES(#{sysMsg.msg})
+    </insert>
+
+    <delete id="deleteMsg">
+        DELETE FROM sys_msg WHERE id=#{id}
+    </delete>
+
+    <update id="updateMsg">
+        UPDATE sys_msg SET msg=sysMsg.msg WHERE id=sysMsg.id
+    </update>
+
+    <select id="selectSysPermissionList" resultType="com.hhm.workshirodemo.domain.SysPermission">
+      SELECT c.p_id,c.p_name,c.url,c.parent_id,c.permissions FROM sys_user_role a
+        LEFT JOIN sys_role_permission b ON a.role_id=b.role_id
+        LEFT JOIN sys_permission c ON b.permission_id=c.p_id
+      WHERE a.uid=#{uid}
+    </select>
+
+</mapper>

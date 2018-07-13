@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>信息管理</title>
+</head>
+<body>
+<h1>信息列表</h1>
+
+<a href="/msg/add">添加</a>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>内容</th>
+        <th>操作</th>
+    </thead>
+    <tbody>
+            <tr th:each="sysMsg:${msgList}">
+                <td th:text="${sysMsg.id}"></td>
+                <td th:text="${sysMsg.msg}"></td>
+                <td><a href="/msg/edit">编辑</a></td>
+                <td><a href="/msg/del">删除</a></td>
+            </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

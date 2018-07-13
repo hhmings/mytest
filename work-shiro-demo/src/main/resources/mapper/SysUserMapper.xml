@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hhm.workshirodemo.dao.SysUserMapper">
+
+    <!-- 首页的菜单显示-->
+    <select id="selectMenuList" resultType="com.hhm.workshirodemo.domain.SysPermission">
+      SELECT c.p_name,c.url,c.parent_id FROM sys_user_role a
+        LEFT JOIN sys_role_permission b ON a.role_id=b.role_id
+        LEFT JOIN sys_permission c ON b.permission_id=c.p_id
+      WHERE a.uid=#{uid} AND c.type!=2
+    </select>
+
+    <!-- 获取权限-->
+    <select id="selectSysPermissionList" resultType="com.hhm.workshirodemo.domain.SysPermission">
+        SELECT c.p_name,c.permissions FROM sys_user_role a
+        LEFT JOIN sys_role_permission b ON a.role_id=b.role_id
+        LEFT JOIN sys_permission c ON b.permission_id=c.p_id
+        WHERE a.uid=#{uid}
+    </select>
+
+</mapper>

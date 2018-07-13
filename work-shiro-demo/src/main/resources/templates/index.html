@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>首页</title>
+</head>
+<body>
+
+<div>
+    <ul>
+        <li th:each="menu:${menuList}">
+
+            <a th:href="${menu.url}==null?'#':${menu.url}">
+                <span th:text="${menu.p_name}">系统管理</span>
+            </a>
+            <span th:text="${menu.url}==null?'(目录)':''"></span>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>
