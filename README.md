@@ -5,3 +5,7 @@
 1. work-order-unpay
 遇到的问题1：redis的发布订阅可能没反应？
 逻辑没问题的话，可以考虑是否是redis版本的问题。
+
+2.work-shiro-demo
+
+该项目关于权限控制的实现。

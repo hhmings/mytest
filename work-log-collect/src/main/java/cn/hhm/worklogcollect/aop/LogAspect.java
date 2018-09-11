@@ -25,8 +25,8 @@ import java.util.Date;
  * @outhor Ming
  * @create 2018-04-04 8:51
  */
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class LogAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
