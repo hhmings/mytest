@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.hhm.workmybatis.dao.UserDao">
+<mapper namespace="cn.hhm.workmybatis.dao.TestTypeMapper">
 
-    <select id="findUserList" resultType="cn.hhm.workmybatis.domain.User">
-        SELECT * FROM  user
+    <resultMap id="baseResultMap" type="cn.hhm.workmybatis.domain.TestType">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="testTypeEnum" column="type"
+        javaType="TestTypeEnum"/>
+    </resultMap>
+    
+    <insert id="insert" parameterType="cn.hhm.workmybatis.domain.TestType">
+        INSERT INTO test_type(id,type) VALUES (#{id},#{testTypeEnum,javaType=TestTypeEnum})
+    </insert>
+
+    <select id="selectList" resultMap="baseResultMap">
+        SELECT * FROM  test_type WHERE type=#{testTypeEnum,javaType=TestTypeEnum}
     </select>
 
 </mapper>
